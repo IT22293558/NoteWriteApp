@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.notewriteapp.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment2_to_addRecordFragment3"
+            app:destination="@id/addRecordFragment3" />
+        <action
+            android:id="@+id/action_homeFragment2_to_editRecordFragment2"
+            app:destination="@id/editRecordFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRecordFragment3"
+        android:name="com.example.notewriteapp.fragments.AddRecordFragment"
+        android:label="AddRecordFragment" >
+        <action
+            android:id="@+id/action_addRecordFragment3_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editRecordFragment2"
+        android:name="com.example.notewriteapp.fragments.EditRecordFragment"
+        android:label="EditRecordFragment" >
+        <action
+            android:id="@+id/action_editRecordFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+
+        <argument
+            android:name="record"
+            app:argType="com.example.notewriteapp.model.Record"
+            app:nullable="true"/>
+    </fragment>
+</navigation>
