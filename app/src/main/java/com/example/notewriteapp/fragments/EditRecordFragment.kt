@@ -60,7 +60,7 @@ class EditRecordFragment : Fragment(R.layout.fragment_edit_record), MenuProvider
             if(recordTitle.isNotEmpty()){
                 val record = Record(currentRecord.id,recordTitle, recordDesc)
                 recordsViewModel.updateRecord(record)
-                view.findNavController().popBackStack(R.id.homeFragment2,false)
+                view.findNavController().popBackStack(R.id.homeFrag,false)
             }else{
                 Toast.makeText(context,"Please enter note title",Toast.LENGTH_SHORT).show()
             }
@@ -74,7 +74,7 @@ class EditRecordFragment : Fragment(R.layout.fragment_edit_record), MenuProvider
             setPositiveButton("Delete"){_,_ ->
                 recordsViewModel.deleteRecord(currentRecord)
                 Toast.makeText(context,"Note Deleted",Toast.LENGTH_SHORT).show()
-                view?.findNavController()?.popBackStack(R.id.homeFragment2,false)
+                view?.findNavController()?.popBackStack(R.id.homeFrag,false)
             }
             setNegativeButton("Cancel",null)
         }.create().show()

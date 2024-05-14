@@ -2,10 +2,10 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav"
-    app:startDestination="@id/homeFragment2">
+    app:startDestination="@id/homeFrag">
 
     <fragment
-        android:id="@+id/homeFragment2"
+        android:id="@+id/homeFrag"
         android:name="com.example.notewriteapp.fragments.HomeFragment"
         android:label="HomeFragment" >
         <action
@@ -21,7 +21,7 @@
         android:label="AddRecordFragment" >
         <action
             android:id="@+id/action_addRecordFragment3_to_homeFragment2"
-            app:destination="@id/homeFragment2" />
+            app:destination="@id/homeFrag" />
     </fragment>
     <fragment
         android:id="@+id/editRecordFragment2"
@@ -29,7 +29,7 @@
         android:label="EditRecordFragment" >
         <action
             android:id="@+id/action_editRecordFragment2_to_homeFragment2"
-            app:destination="@id/homeFragment2" />
+            app:destination="@id/homeFrag" />
 
         <argument
             android:name="record"

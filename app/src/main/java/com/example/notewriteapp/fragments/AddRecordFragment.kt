@@ -56,7 +56,7 @@ class AddRecordFragment : Fragment(R.layout.fragment_add_record),MenuProvider {
             recordsViewModel.addRecord(record)
 
             Toast.makeText(addRecordView.context, "Note Saved",Toast.LENGTH_SHORT).show()
-            view.findNavController().popBackStack(R.id.homeFragment2,false)
+            view.findNavController().popBackStack(R.id.homeFrag,false)
         }else{
             Toast.makeText(addRecordView.context, "Please enter note title",Toast.LENGTH_SHORT).show()
         }
